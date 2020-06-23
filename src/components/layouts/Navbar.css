@@ -1,8 +1,10 @@
 .dropdown-item:hover {
   background: orange !important;
+  background: orange !important;
 }
 
 .nav-link:hover {
+  color: blue !important;
   color: blue !important;
 }
 
@@ -18,7 +20,11 @@
 
 .navbar-toggler {
   outline: none !important;
-  border-color: orange;
+  border-color: orange !important;
+}
+
+body {
+  padding-top: 0px;
 }
 
 body {

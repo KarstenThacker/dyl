@@ -5,6 +5,7 @@ import Navbar from "./components/layouts/Navbar";
 import "./components/layouts/Navbar.css";
 import Footer from "./components/layouts/Footer";
 import "./components/layouts/Footer.css";
+
 // React Router Import
 import { Switch, Route } from "react-router-dom";
 //Import Pages
@@ -12,6 +13,7 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import "./components/pages/About.css";
 import Contact from "./components/pages/Contact";
+import Form from "./components/pages/Form";
 import PageNotFound from "./components/pages/PageNotFound";
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
+        <Route path="/form" component={Form} />
         <Route component={PageNotFound} />
       </Switch>
       <Footer />
