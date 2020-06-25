@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/layouts/Jumbotron.js";
 import Accordd from "../layouts/Faq.js";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 class Home extends Component {
 	render() {
 		return (
 			<div>
 				<Jumbotron />
-
 				<h2>Home page</h2>
 				<p>
 					Lorem ipsum dolor sit amet, nunc sollicitudin tempor ullamcorper, a
@@ -35,7 +35,6 @@ class Home extends Component {
 					orci vitae sem, aliquam ligula. Massa vestibulum, sed iaculis
 					tincidunt nec urna sit ac.
 				</p>
-
 				<h2>Home Page</h2>
 				<p>
 					Lorem ipsum dolor sit amet, nunc sollicitudin tempor ullamcorper, a
@@ -63,7 +62,6 @@ class Home extends Component {
 					orci vitae sem, aliquam ligula. Massa vestibulum, sed iaculis
 					tincidunt nec urna sit ac.
 				</p>
-
 				<p>
 					Lorem ipsum dolor sit amet, nunc sollicitudin tempor ullamcorper, a
 					magna senectus wisi. Luctus blandit turpis id, id turpis vestibulum,
@@ -90,9 +88,15 @@ class Home extends Component {
 					orci vitae sem, aliquam ligula. Massa vestibulum, sed iaculis
 					tincidunt nec urna sit ac.
 				</p>
-
 				<h2>Frequently Asked Questions (FAQs)</h2>
 				<Accordd />
+				<br />
+				<br />
+				<br />
+				<h2>Subscribe to our Newsletter</h2>
+				<MailchimpSubscribe url={process.env.REACT_APP_MAILCHIMP_URL} />
+				<br />
+				<br />
 			</div>
 		);
 	}
