@@ -13,9 +13,9 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import "./components/pages/About.css";
-import Programs from "./components/pages/Programs";
+//import Programs from "./components/pages/Programs";
 import Resources from "./components/pages/Resources";
-import Contact from "./components/pages/Contact";
+//import Contact from "./components/pages/Contact";
 import Services from "./components/pages/Services";
 import Form from "./components/pages/Form";
 import PageNotFound from "./components/pages/PageNotFound";
@@ -31,9 +31,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/programs" component={Programs} />
           <Route path="/resources" component={Resources} />
-          <Route path="/contact" component={Contact} />
           <Route path="/services" component={Services} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />

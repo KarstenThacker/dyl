@@ -34,18 +34,10 @@ const Navbar = () => {
               &nbsp; Home <span className="sr-only">(current)</span>
             </Link>
           </li>
-
           <li className="nav-item">
             <Link className="nav-link" to="/about">
               <FontAwesomeIcon icon={faAddressCard} />
               &nbsp; About Us
-            </Link>
-          </li>
-
-          <li className="nav-item">
-            <Link className="nav-link" to="/Programs">
-              <FontAwesomeIcon icon={faAddressBook} />
-              &nbsp; Programs
             </Link>
           </li>
 
@@ -57,26 +49,17 @@ const Navbar = () => {
           </li>
 
           <li className="nav-item">
-            <Link className="nav-link" to="/contact">
-              <FontAwesomeIcon icon={faAddressBook} />
-              &nbsp; Contact
-            </Link>
-          </li>
-
-          <li className="nav-item">
             <Link className="nav-link" to="/services">
               <FontAwesomeIcon icon={faAddressBook} />
               &nbsp; Services
             </Link>
           </li>
-
           <li className="nav-item">
             <Link className="nav-link" to="/form">
               <FontAwesomeIcon icon={faAddressBook} />
               &nbsp; Form
             </Link>
           </li>
-
           <li className="nav-item dropdown">
             <Link
               className="nav-link dropdown-toggle"
