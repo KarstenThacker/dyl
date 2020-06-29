@@ -1,6 +1,10 @@
 .about {
-  background: #add8e6;
-  padding-top: 50px;
-  position: relative;
-  z-index: -10000;
+  background-image: url(./img/img27.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.h2 {
+  font-display: red;
+  position: center;
 }

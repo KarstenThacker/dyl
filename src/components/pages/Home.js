@@ -1,62 +1,40 @@
 import React, { Component } from "react";
-
+import Jumbotron from "../../components/layouts/Jumbotron.js";
+import Accordd from "../layouts/Faq.js";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
+import img26 from "./img/img26.jpg";
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div style={{ backgroundImage: `url(${img26})` }}>
+        <Jumbotron />
         <h2>Home page</h2>
         <p>
-          Lorem ipsum dolor sit amet, nunc sollicitudin tempor ullamcorper, a
-          magna senectus wisi. Luctus blandit turpis id, id turpis vestibulum,
-          minim amet suscipit turpis eu. Eget egestas a vestibulum quisque sed
-          nemo, justo ipsum vitae odio orci placerat, quisque modi sapien lectus
-          egestas. Pretium hac a hymenaeos at, id neque natoque lectus ultrices.
-          Natoque pellentesque lacinia urna turpis consequuntur, leo nisl
-          magnam, lorem amet, gravida scelerisque, nunc eu integer tellus morbi
-          lectus. Nullam adipiscing mauris in varius lectus lorem, orci rutrum a
-          aliquam, vestibulum leo nulla, vitae pulvinar eget. Gravida rhoncus
-          scelerisque ultricies erat leo ultrices, eget ridiculus, nonummy ac
-          adipiscing, ut ultrices nec congue, et aliquam consectetuer. Egestas
-          neque molestie donec ue scelerisque sit, felis lacus malesuada
-          praesent et, duis rhoncus mi vel natoque auctor wisi. Quis lobortis,
-          deserunt odio aliquet, adipiscing integer nullam elit mollis, faucibus
-          ligula malesuada morbi, magnis donec felis arcu augue. Scelerisque
-          viverra vivamus et lectus ratione, mollis rerum maecenas. Aliquam
-          consequuntur pellentesque mauris integer hendrerit elementum. Et
-          rutrum. Habitasse neque egestas morbi morbi torquent et, nullam mi
-          quam ut sed aliquam, fringilla vitae metus. Donec mattis faucibus.
-          Convallis fusce vel est sit convallis, diam mi diam vulputate nonummy,
-          est tellus, tristique nonummy per nibh. Et eget justo urna enim,
-          ridiculus expedita a, congue tempus augue in quam rhoncus, in et neque
-          orci vitae sem, aliquam ligula. Massa vestibulum, sed iaculis
-          tincidunt nec urna sit ac.
+          DIRECT YOUR LIFE understands that correctional institutions have
+          become a melting pot of untapped potential. Over 90% of inmates arrive
+          at these institutions without a high school diploma, while over 70%
+          have never made it past the ninth grade. Once equipped with the proper
+          life skills, education and reintegration coaching, the potential for a
+          successful reintegration back to society is more likely.
         </p>
         <p>
-          Lorem ipsum dolor sit amet, nunc sollicitudin tempor ullamcorper, a
-          magna senectus wisi. Luctus blandit turpis id, id turpis vestibulum,
-          minim amet suscipit turpis eu. Eget egestas a vestibulum quisque sed
-          nemo, justo ipsum vitae odio orci placerat, quisque modi sapien lectus
-          egestas. Pretium hac a hymenaeos at, id neque natoque lectus ultrices.
-          Natoque pellentesque lacinia urna turpis consequuntur, leo nisl
-          magnam, lorem amet, gravida scelerisque, nunc eu integer tellus morbi
-          lectus. Nullam adipiscing mauris in varius lectus lorem, orci rutrum a
-          aliquam, vestibulum leo nulla, vitae pulvinar eget. Gravida rhoncus
-          scelerisque ultricies erat leo ultrices, eget ridiculus, nonummy ac
-          adipiscing, ut ultrices nec congue, et aliquam consectetuer. Egestas
-          neque molestie donec ue scelerisque sit, felis lacus malesuada
-          praesent et, duis rhoncus mi vel natoque auctor wisi. Quis lobortis,
-          deserunt odio aliquet, adipiscing integer nullam elit mollis, faucibus
-          ligula malesuada morbi, magnis donec felis arcu augue. Scelerisque
-          viverra vivamus et lectus ratione, mollis rerum maecenas. Aliquam
-          consequuntur pellentesque mauris integer hendrerit elementum. Et
-          rutrum. Habitasse neque egestas morbi morbi torquent et, nullam mi
-          quam ut sed aliquam, fringilla vitae metus. Donec mattis faucibus.
-          Convallis fusce vel est sit convallis, diam mi diam vulputate nonummy,
-          est tellus, tristique nonummy per nibh. Et eget justo urna enim,
-          ridiculus expedita a, congue tempus augue in quam rhoncus, in et neque
-          orci vitae sem, aliquam ligula. Massa vestibulum, sed iaculis
-          tincidunt nec urna sit ac.
+          Our objective is to make positive changes in the community through a
+          Restorative Approach. This approach is essential to produce a real and
+          lasting transformation in the lives of individuals. DIRECT YOUR LIFE
+          coaches these individuals on building good habits that foster success,
+          while also providing meaningful connections and a positive support
+          system.
         </p>
+
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <Accordd />
+        <br />
+        <br />
+        <br />
+        <h2>Subscribe to our Newsletter</h2>
+        <MailchimpSubscribe url={process.env.REACT_APP_MAILCHIMP_URL} />
+        <br />
+        <br />
       </div>
     );
   }

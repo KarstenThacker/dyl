@@ -2,6 +2,7 @@
   "name": "projectreact",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
@@ -10,14 +11,27 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.5.0",
-    "create-react-app": "^3.4.1",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "jquery": "^3.5.1",
+    "nodemailer": "^6.4.10",
+    "nodemon": "^2.0.4",
+    "popper.js": "^1.16.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
+    "react-mailchimp-subscribe": "^2.1.0",
+    "react-player": "^2.3.1",
+    "react-reveal": "^1.2.2",
     "react-router-dom": "^5.2.0",
+    "react-screen": "^0.1.7",
     "react-scripts": "3.4.1",
+    "sqlite3": "^4.2.0",
     "styled-components": "^5.1.1"
   },
   "scripts": {
@@ -40,5 +54,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.7"
   }
 }

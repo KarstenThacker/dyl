@@ -1,75 +1,142 @@
 import React, { Component } from "react";
-import { form, Form } from "react-bootstrap";
+import axios from "axios";
+import Jumbotron from "../../components/layouts/Jumbotron.js";
 
-class Format extends React.Component {
+export default class Form extends Component {
   state = {
-    firstName: " ",
-    lastName: " ",
-    username: " ",
+    name: " ",
+    lastname: " ",
     email: " ",
-    password: " ",
+    messsage: " ",
+    sent: false,
   };
 
-  change = (e) => {
-    this.props.onChange({ [e.target.name]: e.target.value });
+  handleName = (e) => {
     this.setState({
-      [e.target.name]: e.target.value,
+      name: e.target.value,
     });
   };
 
-  onSubmit = (e) => {
+  handleLastname = (e) => {
+    this.setState({
+      lastname: e.target.value,
+    });
+  };
+
+  handleEmail = (e) => {
+    this.setState({
+      email: e.target.value,
+    });
+  };
+
+  handleMessage = (e) => {
+    this.setState({
+      messsage: e.target.value,
+    });
+  };
+
+  formSubmit = (e) => {
     e.preventDefault();
+
+    let data = {
+      name: this.state.name,
+      lastname: this.state.lastname,
+      email: this.state.email,
+      message: this.state.messsage,
+    };
+
+    axios
+      .post("/api/forma", data)
+      .then((res) => {
+        this.setState(
+          {
+            sent: true,
+          },
+          this.resetForm()
+        );
+      })
+      .catch(() => {
+        console.log("message not sent");
+      });
+  };
+
+  resetForm = () => {
     this.setState({
-      firstName: " ",
-      lastName: " ",
-      username: " ",
+      name: " ",
+      lastname: " ",
       email: " ",
-      password: " ",
+      messsage: " ",
     });
+
+    setTimeout(() => {
+      this.setState({
+        sent: false,
+      });
+    }, 3000);
   };
 
   render() {
     return (
-      <form>
-        <input
-          name="firstName"
-          placeholder="First name"
-          value={this.state.firstName}
-          onChange={(e) => this.change(e)}
-        />
-        <br />
-        <input
-          name="lastName"
-          placeholder="Last name"
-          value={this.state.lastName}
-          onChange={(e) => this.change(e)}
-        />
-        <br />
-        <input
-          name="username"
-          placeholder="Username"
-          value={this.state.username}
-          onChange={(e) => this.change(e)}
-        />
-        <br />
-        <input
-          name="email"
-          placeholder="email"
-          value={this.state.email}
-          onChange={(e) => this.change(e)}
-        />
-        <br />
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          value={this.state.password}
-          onChange={(e) => this.change(e)}
-        />
-        <br />
-        <button onClick={(e) => this.onSubmit(e)}>Submit</button>
-      </form>
+      <div className="container">
+        <form onClick={this.formSubmit}>
+          <div className="singleItem">
+            <Jumbotron />
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              className="name"
+              placeholder="your name..."
+              value={this.state.name}
+              onChange={this.handleName}
+            />
+          </div>
+
+          <div className="singleItem">
+            <label htmlFor="lastname">Lastname</label>
+            <input
+              type="text"
+              name="lastname"
+              className="lastname"
+              placeholder="your lastname..."
+              value={this.state.lastname}
+              onChange={this.handleLastname}
+            />
+          </div>
+
+          <div className="singleItem">
+            <label htmlFor="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              className="name"
+              placeholder="your email..."
+              value={this.state.email}
+              onChange={this.handleEmail}
+            />
+          </div>
+
+          <div className="textArea singleItem">
+            <label htmlFor="message">Message</label>
+            <textarea
+              name="message"
+              id=" "
+              cols="30"
+              rows="5"
+              placeholder="your message..."
+              value={this.state.message}
+              onChange={this.handleMessage}
+            ></textarea>
+          </div>
+
+          <div className={this.state.sent ? "msg msgAppear" : "msg"}>
+            Message has been sent
+          </div>
+          <div className="btn">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
     );
   }
 }
-export default Form;

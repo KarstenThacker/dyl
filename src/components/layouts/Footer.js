@@ -65,7 +65,8 @@ function Footer() {
             <div className="social-container">
               <a
                 href="https://www.youtube.com/watch?v=eIPu-UPCrd8"
-                className="youtube social">
+                className="youtube social"
+              >
                 <FontAwesomeIcon icon={faYoutube} size="2x" />
               </a>
               <a href="https://www.facebook.com" className="facebook social">
@@ -91,7 +92,7 @@ export default Footer;
 
 const FooterContainer = styled.footer`
   .footer-middle {
-    background: #292b2c;
+    background: #87a9ba;
     padding-top: 20px;
     color: white;
   }

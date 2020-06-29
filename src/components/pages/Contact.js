@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, form, label, textarea, button } from "react-bootstrap";
+import Jumbotron from "../../components/layouts/Jumbotron.js";
 
 class App extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <Jumbotron />
         <form
           id="contact-form"
           onSubmit={this.handleSubmit.bind(this)}
@@ -28,6 +30,7 @@ class App extends React.Component {
               onChange={this.onNameChange.bind(this)}
             />
           </div>
+
           <div className="form-group">
             <label htmlFor="exampleInputEmail1">Email address</label>
             <input
@@ -50,6 +53,7 @@ class App extends React.Component {
           <button type="submit" className="btn btn-primary">
             Submit
           </button>
+          <h6>Email: info@directyourlife.org</h6>
         </form>
       </div>
     );
